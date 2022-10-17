@@ -4,16 +4,15 @@
 # pip install requests
 
 import requests
-# Get
-# request_bbc_status_code = requests.get("https://www.bbc.co.uk/player/live/bbcnews")
-#
-# if request_bbc_status_code == 200:
-#     # Check the outcome of our API call
-#     print("Successful")
-# else:
-#     print("Website couldn't be located. Status Code:" + str(request_bbc_status_code))
-#
-# print(request_bbc_status_code.headers)
+request_bbc_status_code = requests.get("https://www.bbc.co.uk/player/live/bbcnews")
+
+if request_bbc_status_code == 200:
+    # Check the outcome of our API call
+    print("Successful")
+else:
+    print("Website couldn't be located. Status Code:" + str(request_bbc_status_code))
+
+print(request_bbc_status_code.headers)
 
 url = "http://api.postcodes.io/postcodes/"
 # store the data
@@ -50,7 +49,10 @@ def getresponse():
     return response_dict["result"].keys()
 
 print(valid(postcode))
-print (getresponse())
+
+
+
+
 
 
 
